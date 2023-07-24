@@ -16,7 +16,23 @@ button.addEventListener('click', handleClick);
 Practice Your Times Tables
 ************************ */
 
-// Your Code Here
+const multForm = document.querySelector('#multiplying-form');
+
+multForm.addEventListener('submit', (evt) => {
+  evt.preventDefault();
+
+  const multiples = [];
+  const num = Number(document.querySelector('#mults-of').value);
+  const max = Number(document.querySelector('#max').value);
+
+  for (let i = 1; i <= max; i += 1) {
+    if (i % num === 0) {
+      multiples.push(i);
+    }
+  }
+
+  console.log(multiples)
+})
 
 /** **************
 An Agreeable Form
