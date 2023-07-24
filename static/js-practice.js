@@ -38,7 +38,13 @@ multForm.addEventListener('submit', (evt) => {
 An Agreeable Form
 *************** */
 
-// Your Code Here
+const foodForm = document.querySelector('#agreeable-form');
+
+foodForm.addEventListener('submit', (evt) => {
+  evt.preventDefault();
+  const foodDiv = document.querySelector('#favorite-food-input').value;
+  document.querySelector('#agreeable-text').textContent = `I like ${foodDiv}, too!`;
+});
 
 /** ****************
 Five colored primes
